@@ -1,4 +1,4 @@
-import { div, render } from 'nojsxpreact.js';
+import { div, render } from './nojsxpreact.js';
 
 const main = () => {
     const helloWorld = div(null, "Hello World");
