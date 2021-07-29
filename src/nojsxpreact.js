@@ -1,8 +1,9 @@
-import { h, render } from 'https://cdn.skypack.dev/preact';
+import { h } from 'https://cdn.skypack.dev/preact';
 
-const define = (tag) => (attrs, ...childs) => {
+export { render } from 'https://cdn.skypack.dev/preact';
+export const define = (tag) => (attrs, ...childs) => {
     return h(tag, attrs, childs);
-};
+}
 
 const HTML_TAGS = (() => {
     let tags = {};
@@ -143,7 +144,7 @@ const HTML_TAGS = (() => {
 })();
 
 
-const {
+export const {
     html,
     base,
     head,
@@ -164,7 +165,7 @@ const {
     h5,
     h6,
     hggroup,
-    main: main$1,
+    main,
     nav,
     section,
     blockquote,
@@ -259,11 +260,3 @@ const {
     slot,
     template
 } = HTML_TAGS;
-
-const main = () => {
-    const helloWorld = div(null, "Hello World");
-
-    render(helloWorld, document.body);
-};
-
-main();

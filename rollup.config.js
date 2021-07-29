@@ -5,7 +5,7 @@ export default {
     input: 'example/app.js',
     output: [
         {
-            file: 'public/app.js',
+            file: 'example-output/app.js',
             format: 'esm'
         }
     ],
@@ -13,6 +13,7 @@ export default {
         copy({
             targets: [
                 { src: 'example/index.html', dest: 'example-output' },
+                { src: 'example/nojsxpreact.js', dest: 'example-output' },
             ]
         }),
         clear({
