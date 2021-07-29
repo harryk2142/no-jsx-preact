@@ -1,0 +1,33 @@
+{
+  "name": "no-jsx-preact",
+  "version": "1.0.0",
+  "description": "Write Preact App without JSX",
+  "main": "index.js",
+  "keywords": [
+    "html",
+    "javascript",
+    "template",
+    "custom",
+    "elements",
+    "preact"
+  ],
+  "scripts": {
+    "minify-js": "node-minify --compressor terser --input src/nojsxpreact.js --output public/nojsxpreact.js",
+    "gzip-js": "gzip public/nojsxpreact.js --extension=gz",
+    "build": "pnpm minify-js && pnpm gzip-js",
+    "minify-example-js": "node-minify --compressor terser --input example/app.js --output example-output/app.js",
+    "gzip-example-js": "gzip example-output/app.js --extension=gz",
+    "build-example": "rollup -c && pnpm minify-example-js && pnpm gzip-example-js"
+  },
+  "author": "harryk2142",
+  "license": "MIT",
+  "devDependencies": {
+    "@node-minify/cli": "^6.2.0",
+    "@node-minify/terser": "^6.2.0",
+    "gzip-cli": "^1.2.0",
+    "rollup": "^2.55.1",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-copy": "^3.4.0"
+  },
+  "dependencies": {}
+}
