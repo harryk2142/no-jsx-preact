@@ -13,7 +13,7 @@ export default {
         copy({
             targets: [
                 { src: 'example/index.html', dest: 'example-output' },
-                { src: 'example/nojsxpreact.js', dest: 'example-output' },
+                { src: 'src/nojsxpreact.js', dest: 'example-output' },
             ]
         }),
         clear({

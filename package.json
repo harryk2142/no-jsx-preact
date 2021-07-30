@@ -17,7 +17,9 @@
     "build": "pnpm minify-js && pnpm gzip-js",
     "minify-example-js": "node-minify --compressor terser --input example/app.js --output example-output/app.js",
     "gzip-example-js": "gzip example-output/app.js --extension=gz",
-    "build-example": "rollup -c && pnpm minify-example-js && pnpm gzip-example-js"
+    "minify-nojsxpreact-js": "node-minify --compressor terser --input src/nojsxpreact.js --output example-output/nojsxpreact.js",
+    "gzip-nojsxpreact-js": "gzip example-output/nojsxpreact.js --extension=gz",
+    "build-example": "rollup -c && pnpm minify-example-js && pnpm gzip-example-js && pnpm minify-nojsxpreact-js && pnpm gzip-nojsxpreact-js"
   },
   "author": "harryk2142",
   "license": "MIT",
