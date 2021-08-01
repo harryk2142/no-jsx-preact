@@ -12,14 +12,9 @@
     "preact"
   ],
   "scripts": {
-    "minify-js": "node-minify --compressor terser --input src/nojsxpreact.js --output public/nojsxpreact.js",
+    "minify-js": "node-minify --compressor terser --input public/nojsxpreact.js --output public/nojsxpreact.js",
     "gzip-js": "gzip public/nojsxpreact.js --extension=gz",
-    "build": "pnpm minify-js && pnpm gzip-js",
-    "minify-example-js": "node-minify --compressor terser --input example/app.js --output example-output/app.js",
-    "gzip-example-js": "gzip example-output/app.js --extension=gz",
-    "minify-nojsxpreact-js": "node-minify --compressor terser --input src/nojsxpreact.js --output example-output/nojsxpreact.js",
-    "gzip-nojsxpreact-js": "gzip example-output/nojsxpreact.js --extension=gz",
-    "build-example": "rollup -c && pnpm minify-example-js && pnpm gzip-example-js && pnpm minify-nojsxpreact-js && pnpm gzip-nojsxpreact-js"
+    "build": "rollup -c && pnpm minify-js && pnpm gzip-js"
   },
   "author": "harryk2142",
   "license": "MIT",
@@ -30,6 +25,5 @@
     "rollup": "^2.55.1",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-copy": "^3.4.0"
-  },
-  "dependencies": {}
+  }
 }
