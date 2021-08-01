@@ -6,4 +6,4 @@ https://github.com/flutter/flutter
 
 https://github.com/vsmid/htmlhammer
 
-## run pnpm build-example
+## run pnpm build to minify js file
